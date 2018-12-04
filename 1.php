@@ -1,5 +1,9 @@
 <?php
 
+/* здесь выполнено задание 2. задание 1 от него будет отличаться тем, что пути к файлам будут прописаны вручную
+поэтому позволяю себе его не делать*/
+
+
 function getMiniImagePath()
 {
     return ['image/catMini.jpg', 'image/jsMini.jpg', 'image/mailRuMini.jpg',];
@@ -25,8 +29,9 @@ function createGalleryStructure()
         (function_exists('getImageName'))) {
 
         for ($i = 0; $i < count(getMiniImagePath()); $i++) {
-            $gallery .= "<a href =" . getLargeImagePath()[$i] . " target= 'target_blank'><img src ="
-                . getMiniImagePath()[$i] . " alt =" .getImageName()[$i]. " height = '200' width = '350'></a>";
+            $gallery .= "<div class = 'imageWrapper'><a href =" . getLargeImagePath()[$i]
+                . " target= 'target_blank'><img src =" . getMiniImagePath()[$i] . " alt =" .getImageName()[$i]
+                . " height = '200' width = '350'></a></div>";
         }
     }
 
